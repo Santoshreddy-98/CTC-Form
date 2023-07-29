@@ -31,7 +31,7 @@ def generate_document(data):
 
         "${EMP_LOCATION}": data['location'],
 
-        "${DOJ}": "17/05/2022",
+        "${DOJ}": "-",
 
         "${ANNUAL_BASIC_CTC}": data['basic_percentage'],
 
@@ -52,6 +52,33 @@ def generate_document(data):
         "${ANNUAL_TOTAL}": data['annual_ctc'],
 
         "${MONTHLY_TOTAL}": data['monthly_ctc'],
+        "${ANNUAL_ESIC_SHARE}":"-",
+        "${MONTHLY_ESIC}":"-",
+        "${ANL_COM_CON_PF}":"-",
+        "${MON_COM_CON_PF}":"-",
+        "${ANNUAL_DEDUCTIONS}":"-",
+        "${MONTHLY_DEDUCTIONS}":"-",
+        "${EMPLOYER_SHARE_PF}":"-",
+        "${MON_EMPLOYER_SHARE_PF}":"-",
+        "${ANL_GROSS_PAY}":"-",
+        "${MON_GROSS_PAY}":"-",
+        "${ANL_ESIC_EMPLOY_SHR}":"-",
+        "${MON_ESIC_EMPLOY_SHAR}":"-",
+        "${ANL_EMPLOY_SHR_PF}":"-",
+        "${MON_EMPLOY_SHAR_PF}":"-",
+        "${ANL_MED_INS}":"-",
+        "${MON_MED_INS}":"-",
+        "${ANL_PRO_TAX}":"-",
+        "${MON_PRO_TAX}":"-",
+        "${ANL_NET_PAY}":"-",
+        "${MON_NET_PAY}":"-",
+        "${ANL_VAR_PAY}":"-",
+        "${MON_VAR_PAY}":"-",
+        "${CTC_EMPLOYR_PF_ESIC_SHARE}":"-",
+
+
+
+
 
     }
 

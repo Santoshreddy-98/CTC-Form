@@ -121,12 +121,23 @@
           </div>
 
           <div class="col-md-4">
-
             <label for="annual-ctc">Annual CTC</label>
-
-            <input type="number" class="form-control" id="annual-ctc" name="annual_ctc" required>
-
+            <select class="form-control" id="annual-ctc" name="annual_ctc" required>
+              <option value="" disabled selected>Select Annual CTC</option>
+              <option value="100000">1L</option>
+              <option value="150000">1.5L</option>
+              <option value="200000">2L</option>
+              <option value="250000">2.5L</option>
+              <option value="300000">3L</option>
+              <option value="350000">3.5L</option>
+              <option value="400000">4L</option>
+              <option value="450000">4.5L</option>
+              <option value="500000">5L</option>
+              <option value="550000">5.5L</option>
+              <option value="600000">6L+</option>
+            </select>
           </div>
+          
 
           <div class="form-group">
 
@@ -137,16 +148,14 @@
           </div>
 
           <div class="form-group">
-
-            <label for="hra-percentage">HRA Percentage (50% of Basic)</label>
-
-            <input type="number" class="form-control" id="hra-percentage" name="hra_percentage">
-
+            <label for="hra-percentage">HRA%(50% of Basic)</label>
+            <input type="number" class="form-control" id="hra-percentage" name="hra_percentage" value="50" readonly>
           </div>
+          
 
           <div class="form-group">
 
-            <label for="special-allowance-percentage">Special Allowance Percentage</label>
+            <label for="special-allowance-percentage">Special Allowance%</label>
 
             <input type="number" class="form-control" id="special-allowance-percentage" name="special_allowance_percentage" value="30" required>
 
@@ -154,13 +163,16 @@
 
           <div class="form-group">
 
-            <label for="conveyance-percentage">Conveyance Percentage</label>
+            <label for="conveyance-percentage">Conveyance%</label>
 
             <input type="number" class="form-control" id="conveyance-percentage" name="conveyance_percentage" value="10" required>
 
           </div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="row w-100 justify-content-between">
+            <div class="col-md-4">
+              <button type="submit" class="btn btn-warning btn-block">Download</button>
+            </div>
 
         </form>
 
