@@ -19,6 +19,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
 
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
     <style>
 
@@ -29,12 +31,25 @@
         }
 
     </style>
+     <style>
+        /* Custom CSS for 3D effect */
+        .container-3d {
+            background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      </style>
 
 </head>
 
-<body>
+<body  style="
+background: rgb(29,37,38);
+background: linear-gradient(90deg, rgba(29,37,38,1) 0%, rgba(204,214,217,1) 100%);">
 
-    <div class="container mt-4">
+    <div class="container mt-4 container-3d">
 
       <h1>Employee Salary Statement</h1>
 
@@ -171,12 +186,16 @@
 
           <div class="row w-100 justify-content-between">
             <div class="col-md-4">
-              <button type="submit" class="btn btn-warning btn-block">Download</button>
+              <button type="submit" class="btn btn-warning btn-block">
+                <i class="fas fa-download" style="margin-right: 5px;"></i> Download
+              </button>
             </div>
+          </div>
+          
 
         </form>
 
-        <a href="#" id="download-link" class="btn btn-secondary" style="display: none;">Download Document</a>
+        <a href="#" id="download-link" class="btn" style="display: none;">Download Document</a>
 
       </div>
 
