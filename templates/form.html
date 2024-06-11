@@ -1,482 +1,318 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Employee Salary Form</title>
-
     <!-- Add Bootstrap CSS link here -->
-
-    <link
-
-      rel="stylesheet"
-
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
     <style>
-
         .form-group {
-
-          margin-bottom: 20px;
-
+            margin-bottom: 20px;
         }
-
-    </style>
-     <style>
-        /* Custom CSS for 3D effect */
         .container-3d {
             background-color: #8EC5FC;
-background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-
-          padding: 20px;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.1);
         }
-      </style>
-
+    </style>
 </head>
-
-<body  style="
-background: rgb(29,37,38);
+<body style="background: rgb(29,37,38);
 background: linear-gradient(90deg, rgba(29,37,38,1) 0%, rgba(204,214,217,1) 100%);">
-
     <div class="container mt-4 container-3d">
-
-      <h1>Employee Salary Statement</h1>
-
-      <form id="employee-form">
-
-        <div class="row">
-
-          <div class="col-md-6">
-
-            <div class="form-group">
-
-              <label for="name">Name</label>
-
-              <input
-
-                type="text"
-
-                class="form-control"
-
-                id="name"
-
-                name="name"
-
-                required
-
-              />
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="designation">Designation</label>
-
-              <select
-
-                class="form-control"
-
-                id="designation"
-
-                name="designation"
-
-                required
-
-              >
-
-                <option value="" disabled selected>Select Designation</option>
-
-                <option value="Software Engineer">Software Engineer</option>
-
-                <option value="Lead Engineer">Lead Engineer</option>
-
-                <option value="Manager">Manager</option>
-
-              </select>
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="location">Location</label>
-
-              <select
-
-                class="form-control"
-
-                id="location"
-
-                name="location"
-
-                required
-
-              >
-
-                <option value="" disabled selected>Select Location</option>
-
-                <option value="Bangalore">Bangalore</option>
-
-                <option value="Pune">Pune</option>
-
-              </select>
-
-            </div>
-
-          </div>
-
-          <div class="col-md-4">
-            <label for="annual-ctc">Annual CTC</label>
-            <select class="form-control" id="annual-ctc" name="annual_ctc" required>
-              <option value="" disabled selected>Select Annual CTC</option>
-              <option value="100000">1L</option>
-              <option value="150000">1.5L</option>
-              <option value="200000">2L</option>
-              <option value="250000">2.5L</option>
-              <option value="300000">3L</option>
-              <option value="350000">3.5L</option>
-              <option value="400000">4L</option>
-              <option value="450000">4.5L</option>
-              <option value="500000">5L</option>
-              <option value="550000">5.5L</option>
-              <option value="600000">6L+</option>
-            </select>
-          </div>
-          
-
-          <div class="form-group">
-
-            <label for="basic-percentage">Basic Percentage</label>
-
-            <input type="number" class="form-control" id="basic-percentage" name="basic_percentage" value="40" required>
-
-          </div>
-
-          <div class="form-group">
-            <label for="hra-percentage">HRA%(50% of Basic)</label>
-            <input type="number" class="form-control" id="hra-percentage" name="hra_percentage" value="50" readonly>
-          </div>
-          
-
-          <div class="form-group">
-
-            <label for="special-allowance-percentage">Special Allowance%</label>
-
-            <input type="number" class="form-control" id="special-allowance-percentage" name="special_allowance_percentage" value="30" required>
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="conveyance-percentage">Conveyance%</label>
-
-            <input type="number" class="form-control" id="conveyance-percentage" name="conveyance_percentage" value="10" required>
-
-          </div>
-
-          <div class="row w-100 justify-content-between">
-            <div class="col-md-4">
-              <button type="submit" class="btn btn-warning btn-block">
-                <i class="fas fa-download" style="margin-right: 5px;"></i> Download
-              </button>
-            </div>
-          </div>
-          
-
+        <!-- <div class="text-center mb-4">
+            <img src="../Picture1.png" alt="Company Logo" class="logo">
+        </div> -->
+        <h1>Employee Annexure Form</h1>
+        <form id="employee-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" maxlength="50" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <select class="form-control" id="designation" name="designation" required>
+                            <option value="Software Engineer">Software Engineer</option>
+<option value="Lead Engineer">Lead Engineer</option>
+<option value="Application Engineer">Application Engineer</option>
+<option value="Associate A.I Software Engineer">Associate A.I. Software Engineer</option>
+<option value="Associate ADAS Software Engineer">Associate ADAS Software Engineer</option>
+<option value="Python Developer">Python Developer</option>
+<option value="EDA Developer">EDA Developer</option>
+<option value="ReactJS Developer">ReactJS Developer</option>
+<option value="ADAS & AI Lead">ADAS & AI Lead</option>
+<option value="Embedded Lead">Embedded Lead</option>
+<option value="Software Lead">Software Lead</option>
+<option value="Application Trainee">Application Trainee</option>
+<option value="Design For Testing Trainee">Design For Testing Trainee</option>
+<option value="Design Verification Trainee">Design Verification Trainee</option>
+<option value="Senior EDA Design Architect">Senior EDA Design Architect</option>
+<option value="Business Development Executive">Business Development Executive</option>
+<option value="Business Development Manager">Business Development Manager</option>
+<option value="Finance Associate">Finance Associate</option>
+<option value="Human Resource Associate">Human Resource Associate</option>
+<option value="Manager">Manager</option>
+<option value="Director">Director</option>
+<option value="Intern">Intern</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <select class="form-control" id="location" name="location" required>
+                            <option value="" disabled selected>Select Location</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Chennai">Chennai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="DOJ">DOJ</label>
+                        <input type="date" class="form-control" id="DOJ" name="DOJ" required placeholder="Date Of Joining"/>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="annual-ctc">Annual CTC</label>
+                    <input type="text" class="form-control" id="annual-ctc" name="annual_ctc" required placeholder="Enter Annual CTC" />
+                </div>
+                <div class="form-group">
+                    <label for="basic-percentage">Basic Percentage</label>
+                    <input type="number" class="form-control" id="basic-percentage" name="basic_percentage" value="40" required>
+                </div>
+                <div class="form-group">
+                    <label for="hra-percentage">HRA%(50% of Basic)</label>
+                    <input type="number" class="form-control" id="hra-percentage" name="hra_percentage" value="50" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="special-allowance-percentage">Special Allowance%</label>
+                    <input type="number" class="form-control" id="special-allowance-percentage" name="special_allowance_percentage" value="30" required>
+                </div>
+                <div class="form-group">
+                    <label for="conveyance-percentage">Conveyance%</label>
+                    <input type="number" class="form-control" id="conveyance-percentage" name="conveyance_percentage" value="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="variable-pay">Variablepay</label>
+                    <input type="number" class="form-control" id="variable-pay" name="variable_pay" value="0">
+                </div>
+                <div class="row w-100 justify-content-between">
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning btn-block">
+                            <i class="fas fa-download" style="margin-right: 5px;"></i> Download
+                        </button>
+                    </div>
+                </div>
         </form>
-
         <a href="#" id="download-link" class="btn" style="display: none;">Download Document</a>
-
-      </div>
-
- 
-
+    </div>
     <!-- Add Bootstrap JS and jQuery scripts here (before closing body tag) -->
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
- 
-
     <script>
-
-      document.getElementById("employee-form").addEventListener("submit", function (event) {
-
-          event.preventDefault(); // Prevent the default form submission behavior
-
- 
-
-          // Fetch form data
-
-          const formData = new FormData(event.target);
-
- 
-
-          // Get the annual CTC and convert it to a number
-
-          const annualCTC = parseFloat(formData.get("annual_ctc"));
-
- 
-
-          // Calculate amounts based on percentages
-
-          const basicPercentage = parseFloat(formData.get("basic_percentage"));
-
-          const hraPercentage = parseFloat(formData.get("hra_percentage"));
-
-          const specialAllowancePercentage = parseFloat(formData.get("special_allowance_percentage"));
-
-          const conveyancePercentage = parseFloat(formData.get("conveyance_percentage"));
-
- 
-
-          const basicAmount = (basicPercentage / 100) * annualCTC;
-
-          const hraAmount = (hraPercentage / 100) * basicAmount; // HRA is 50% of Basic Amount
-
-          const specialAllowanceAmount = (specialAllowancePercentage / 100) * annualCTC;
-
-          const conveyanceAmount = (conveyancePercentage / 100) * annualCTC;
-
- 
-
-          // Update the form inputs with calculated amounts
-
-          formData.set("basic_percentage", basicAmount.toFixed(2));
-
-          formData.set("hra_percentage", hraAmount.toFixed(2));
-
-          formData.set("special_allowance_percentage", specialAllowanceAmount.toFixed(2));
-
-          formData.set("conveyance_percentage", conveyanceAmount.toFixed(2));
-
- 
-
-          // Calculate and update the monthly amounts
-
-          const monthlyBasic = (basicAmount / 12).toFixed(2);
-
-          const monthlyHRA = (hraAmount / 12).toFixed(2);
-
-          const monthlySpecialAllowance = (specialAllowanceAmount / 12).toFixed(2);
-
-          const monthlyConveyance = (conveyanceAmount / 12).toFixed(2);
-
- 
-
-          // Update the form inputs with monthly amounts
-
-          formData.set("monthly_basic", monthlyBasic);
-
-          formData.set("monthly_hra", monthlyHRA);
-
-          formData.set("monthly_special_allowance", monthlySpecialAllowance);
-
-          formData.set("monthly_conveyance", monthlyConveyance);
-
- 
-
-          // Calculate and set the Monthly CTC
-
-          const monthlyCTC = (
-
-              parseFloat(monthlyBasic) +
-
-              parseFloat(monthlyHRA) +
-
-              parseFloat(monthlySpecialAllowance) +
-
-              parseFloat(monthlyConveyance)
-
-          ).toFixed(2);
-
- 
-
-          formData.set("monthly_ctc", monthlyCTC);
-
- 
-
-          // Log the form data and calculated amounts in the console
-
-          console.log("Form Data:", Object.fromEntries(formData));
-
-          console.log("Basic Amount:", basicAmount.toFixed(2));
-
-          console.log("HRA Amount:", hraAmount.toFixed(2));
-
-          console.log("Special Allowance Amount:", specialAllowanceAmount.toFixed(2));
-
-          console.log("Conveyance Amount:", conveyanceAmount.toFixed(2));
-
-          console.log("Monthly Basic:", monthlyBasic);
-
-          console.log("Monthly HRA:", monthlyHRA);
-
-          console.log("Monthly Special Allowance:", monthlySpecialAllowance);
-
-          console.log("Monthly Conveyance:", monthlyConveyance);
-
-          console.log("Monthly CTC:", monthlyCTC);
-
- 
-
-          // Send data to the backend and trigger the download
-
-          fetch("http://127.0.0.1:5000/calculate", {
-
-              method: "POST",
-
-              headers: {
-
-                  "Content-Type": "application/json",
-
-              },
-
-              body: JSON.stringify(Object.fromEntries(formData)), // Convert formData back to an object
-
-          })
-
-          .then(response => {
-
-              if (!response.ok) {
-
-                  throw new Error("Network response was not ok");
-
-              }
-
-              return response.blob();
-
-          })
-
-          .then(blob => {
-
-              const nameInput = formData.get("name");
-
-              const filename = `${nameInput}.docx`;
-
-              // Create a URL for the blob data
-
-              const url = URL.createObjectURL(blob);
-
- 
-
-              // Create a temporary link to trigger the download
-
-              const link = document.createElement("a");
-
-              link.href = url;
-
-              link.download = filename;
-
-             
-
-              link.click();
-
- 
-
-              // Clean up by revoking the URL object
-
-              URL.revokeObjectURL(url);
-
-          })
-
-          .catch(error => {
-
-              // Handle errors here
-
-              console.error("Error:", error);
-
-              // Display an error message to the user if needed
-
-          });
-
-      });
-
- 
-
-      // Function to update the monthly amounts and monthly CTC when the annual CTC changes
-
-      document.getElementById("annual-ctc").addEventListener("input", function () {
-
-          const annualCTC = parseFloat(this.value);
-
-          const basicPercentage = parseFloat(document.getElementById("basic-percentage").value);
-
-          const hraPercentage = parseFloat(document.getElementById("hra-percentage").value);
-
-          const specialAllowancePercentage = parseFloat(document.getElementById("special-allowance-percentage").value);
-
-          const conveyancePercentage = parseFloat(document.getElementById("conveyance-percentage").value);
-
- 
-
-          const basicAmount = (basicPercentage / 100) * annualCTC;
-
-          const hraAmount = (hraPercentage / 100) * basicAmount; // HRA is 50% of Basic Amount
-
-          const specialAllowanceAmount = (specialAllowancePercentage / 100) * annualCTC;
-
-          const conveyanceAmount = (conveyancePercentage / 100) * annualCTC;
-
- 
-
-          const monthlyBasic = (basicAmount / 12).toFixed(2);
-
-          const monthlyHRA = (hraAmount / 12).toFixed(2);
-
-          const monthlySpecialAllowance = (specialAllowanceAmount / 12).toFixed(2);
-
-          const monthlyConveyance = (conveyanceAmount / 12).toFixed(2);
-
- 
-
-          document.getElementById("monthly-basic").value = monthlyBasic;
-
-          document.getElementById("monthly-hra").value = monthlyHRA;
-
-          document.getElementById("monthly-special-allowance").value = monthlySpecialAllowance;
-
-          document.getElementById("monthly-conveyance").value = monthlyConveyance;
-
- 
-
-          const monthlyCTC = (
-
-              parseFloat(monthlyBasic) +
-
-              parseFloat(monthlyHRA) +
-
-              parseFloat(monthlySpecialAllowance) +
-
-              parseFloat(monthlyConveyance)
-
-          ).toFixed(2);
-
- 
-
-          document.getElementById("monthly-ctc").value = monthlyCTC;
-
-      });
-
-  </script>
-
- 
-
- 
-
+        document.getElementById('annual-ctc').addEventListener('input', function (e) {
+            const value = e.target.value.replace(/,/g, ''); // Remove any existing commas
+            e.target.value = value; // Update the input with the sanitized value
+        });
+
+        document.getElementById('annual-ctc').addEventListener('blur', function (e) {
+            let value = e.target.value.replace(/,/g, ''); // Remove any existing commas
+            if (!isNaN(value) && value !== '') {
+                value = parseFloat(value).toFixed(2); // Ensure two decimal places
+                e.target.value = formatWithIndianCommas(value);
+            } else {
+                e.target.value = ''; // Clear the input if it's not a valid number
+            }
+        });
+
+        const formatWithIndianCommas = (num) => {
+    if (typeof num !== 'string') {
+        num = num.toString(); // Convert to string if not already
+    }
+    const [integerPart, decimalPart] = num.split('.'); // Split the number
+    const lastThreeDigits = integerPart.slice(-3);
+    const otherDigits = integerPart.slice(0, -3);
+    const formattedIntegerPart = otherDigits.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + (otherDigits ? "," : "") + lastThreeDigits;
+    return formattedIntegerPart + '.' + decimalPart;
+};
+
+
+        document.getElementById("employee-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // Fetch form data
+            const formData = new FormData(event.target);
+
+            // Get the annual CTC and convert it to a number
+        const annualCTC = parseFloat(formData.get("annual_ctc").replace(/,/g, '')); // Remove commas for calculation
+        let variablePay = formData.get('variable_pay');
+
+        let salary;
+        let finalSalary;
+
+        // Check if variablePay is provided, if not, handle it accordingly
+        if (variablePay) {
+            variablePay = parseFloat(variablePay.replace(/,/g, ''));
+            salary = annualCTC - variablePay;
+        } else {
+            salary = annualCTC;
+        }
+        let CCPF;
+
+        if ((salary / 12) < 20000) {
+            CCPF = (salary * 0.80) * 0.12;
+            finalSalary = salary - CCPF;
+        } else {
+            CCPF = 21600;
+            finalSalary = salary - CCPF;
+        }
+
+        // console.log(annualCTC);
+        // console.log(salary);
+        // console.log(CCPF);
+        // console.log(finalSalary)
+        // console.log(variablePay === 0)
+
+
+            // Calculate amounts based on percentages
+            const basicPercentage = parseFloat(formData.get("basic_percentage"));
+            const hraPercentage = parseFloat(formData.get("hra_percentage"));
+            const specialAllowancePercentage = parseFloat(formData.get("special_allowance_percentage"));
+            const conveyancePercentage = parseFloat(formData.get("conveyance_percentage"));
+            const basicAmount = (basicPercentage / 100) * finalSalary;
+            const hraAmount = (hraPercentage / 100) * basicAmount; // HRA is 50% of Basic Amount
+            const specialAllowanceAmount = (specialAllowancePercentage / 100) * finalSalary;
+            const conveyanceAmount = (conveyancePercentage / 100) * finalSalary;
+
+            // Update the form inputs with calculated amounts
+            formData.set('salary', formatWithIndianCommas(finalSalary.toFixed(2))); // Ensure two decimal places
+            formData.set("basic_percentage", formatWithIndianCommas(basicAmount.toFixed(2)));
+            formData.set("hra_percentage", formatWithIndianCommas(hraAmount.toFixed(2)));
+            formData.set("special_allowance_percentage", formatWithIndianCommas(specialAllowanceAmount.toFixed(2)));
+            formData.set("conveyance_percentage", formatWithIndianCommas(conveyanceAmount.toFixed(2)));
+            formData.set('CCPF', formatWithIndianCommas(CCPF.toFixed(2)))
+            formData.set('variablePay', variablePay === 0 ? '-' : formatWithIndianCommas(variablePay.toFixed(2)));
+
+
+            // Calculate and update the monthly amounts
+            const monthlyBasic = (basicAmount / 12).toFixed(2);
+            const monthlySalary = (finalSalary / 12).toFixed(2);
+            const monthlyHRA = (hraAmount / 12).toFixed(2);
+            const monthlySpecialAllowance = (specialAllowanceAmount / 12).toFixed(2);
+            const monthlyConveyance = (conveyanceAmount / 12).toFixed(2);
+            const monthlyVariablePay = (variablePay/12).toFixed(2);
+            const monthlyCCPF = (CCPF/12).toFixed(2)
+
+            // Update the form inputs with monthly amounts
+            formData.set("monthly_basic", monthlyBasic);
+            formData.set('monthly_salary',monthlySalary);
+            formData.set("monthly_hra", monthlyHRA);
+            formData.set("monthly_special_allowance", monthlySpecialAllowance);
+            formData.set("monthly_conveyance", monthlyConveyance);
+            formData.set("monthly_variable_pay", monthlyVariablePay);
+            formData.set("monthly_CCPF",monthlyCCPF);
+
+
+            // Calculate and set the Monthly CTC
+            const monthlyCTC = (
+                parseFloat(monthlyBasic) +
+                parseFloat(monthlyHRA) +
+                parseFloat(monthlySpecialAllowance) +
+                parseFloat(monthlyConveyance)+
+                parseFloat(monthlyVariablePay)+
+                parseFloat(monthlyCCPF)
+            ).toFixed(2);
+
+            formData.set("monthly_ctc", monthlyCTC);
+
+            // Log the form data and calculated amounts in the console
+            console.log("Form Data:", Object.fromEntries(formData));
+            console.log("Basic Amount:", basicAmount.toFixed(2));
+            console.log("HRA Amount:", hraAmount.toFixed(2));
+            console.log("Special Allowance Amount:", specialAllowanceAmount.toFixed(2));
+            console.log("Conveyance Amount:", conveyanceAmount.toFixed(2));
+            console.log("Monthly Basic:", monthlyBasic);
+            console.log("Monthly HRA:", monthlyHRA);
+            console.log("Monthly Special Allowance:", monthlySpecialAllowance);
+            console.log("Monthly Conveyance:", monthlyConveyance);
+            console.log("Monthly CTC:", monthlyCTC);
+            console.log("Monthly Salary",monthlySalary)
+            console.log("Monthly Variable",monthlyVariablePay)
+            console.log("Monthlyccpf",monthlyCCPF)
+
+            // Send data to the backend and trigger the download
+            fetch("http://127.0.0.1:7393/calculate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(Object.fromEntries(formData)), // Convert formData back to an object
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const nameInput = formData.get("name");
+                const filename = `${nameInput}.docx`;
+                // Create a URL for the blob data
+                const url = URL.createObjectURL(blob);
+                // Create a temporary link to trigger the download
+                const link = document.createElement("a");
+                link.href = url;
+                link.download = filename;
+                link.click();
+                // Clean up by revoking the URL object
+                URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                // Handle errors here
+                console.error("Error:", error);
+                // Display an error message to the user if needed
+            });
+        });
+
+        // Function to update the monthly amounts and monthly CTC when the annual CTC changes
+        document.getElementById("annual-ctc").addEventListener("input", function () {
+            const annualCTC = parseFloat(this.value.replace(/,/g, '')); // Remove commas for calculation
+            const basicPercentage = parseFloat(document.getElementById("basic-percentage").value);
+            const hraPercentage = parseFloat(document.getElementById("hra-percentage").value);
+            const specialAllowancePercentage = parseFloat(document.getElementById("special-allowance-percentage").value);
+            const conveyancePercentage = parseFloat(document.getElementById("conveyance-percentage").value);
+            const basicAmount = (basicPercentage / 100) * annualCTC;
+            const hraAmount = (hraPercentage / 100) * basicAmount; // HRA is 50% of Basic Amount
+            const specialAllowanceAmount = (specialAllowancePercentage / 100) * annualCTC;
+            const conveyanceAmount = (conveyancePercentage / 100) * annualCTC;
+            const monthlySalary = (finalSalary/12).toFixed(2);
+            const monthlyBasic = (basicAmount / 12).toFixed(2);
+            const monthlyHRA = (hraAmount / 12).toFixed(2);
+            const monthlySpecialAllowance = (specialAllowanceAmount / 12).toFixed(2);
+            const monthlyConveyance = (conveyanceAmount / 12).toFixed(2);
+            const monthlyVariablePay = (variablePay/12).toFixed(2);
+            const monthlyCCPF = (CCPF/12).toFixed(2);
+            document.getElementById("monthly-basic").value = monthlyBasic;
+            document.getElementById("monthly-hra").value = monthlyHRA;
+            document.getElementById("monthly-special-allowance").value = monthlySpecialAllowance;
+            document.getElementById("monthly-conveyance").value = monthlyConveyance;
+            document.getElementById("monthly-salary").value = monthlySalary;
+            document.getElementById("monthly-variable-pay").value = monthlyVariablePay
+            document.getElementById("monthly-CCPF").value=  monthlyCCPF
+            const monthlyCTC = (
+                parseFloat(monthlyBasic) +
+                parseFloat(monthlyHRA) +
+                parseFloat(monthlySpecialAllowance) +
+                parseFloat(monthlyConveyance)+
+                parseFloat(monthlyVariablePay)+
+                parseFloat(monthlyCCPF)
+            ).toFixed(2);
+            document.getElementById("monthly-ctc").value = monthlyCTC;
+        });
+    </script>
 </body>
-
 </html>
