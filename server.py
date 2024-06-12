@@ -112,5 +112,5 @@ def calculate():
 
 
 if __name__ == '__main__':
-    port = 7393  # Change the port number to your desired port
-    app.run(debug=True, port=port)
+    # port = 7393  # Change the port number to your desired port
+    app.run()
