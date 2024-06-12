@@ -1,4 +1,6 @@
 Flask
 python-docx
 waitress
+streamlit
+
 
