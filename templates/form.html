@@ -245,7 +245,7 @@ background: linear-gradient(90deg, rgba(29,37,38,1) 0%, rgba(204,214,217,1) 100%
             console.log("Monthlyccpf",monthlyCCPF)
 
             // Send data to the backend and trigger the download
-            fetch("http://127.0.0.1:7393/calculate", {
+            fetch("http://127.0.0.1:5000/calculate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
