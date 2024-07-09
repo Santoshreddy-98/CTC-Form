@@ -98,15 +98,17 @@ def index():
 @app.route('/calculate', methods=['POST'])
 def calculate():
     data = request.get_json()
+
+    print(data)
     file_path = generate_document(data)
-    print(data['name'])
+    # print(data['name'])
 
     filename = data["name"]
 
     response = make_response(send_file(file_path))
 
     response.headers["Content-Disposition"] = f"attachment; filename={filename}"
-    print(response)
+    # print(response)
 
     return response
 
